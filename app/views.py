@@ -20,7 +20,6 @@ def newatickles(id):
     View movie page function that returns the movie details page and its data
     '''
     article_items=get_article(id)
-    print(article_items)
     title=f'{id}'
     return render_template('news.atickle.html', title=title, articles=article_items)
-    
+

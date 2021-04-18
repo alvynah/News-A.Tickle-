@@ -15,8 +15,18 @@
             <p>{{article_items.description}}</p>
             <hr>
             <p>{{article_items.content}}</p>
-        </div>
-        <div>
+            <div class="animated fadeInUp details">
+                {%if article_items.author%}
+                <p class="font-weight-normal">by {{article_items.author}}</a>.
+                </p>
+                {%endif%} {%if article_items.publishedAt%}
+                <p>Posted on: {{article_items.publishedAt[:10]}}</p>
+                {%endif%}
+
+                <p><a href="{{ article_items.url }}">Go to full story</a></p>
+
+
+            </div>
         </div>
     </div>
     {% endfor%}

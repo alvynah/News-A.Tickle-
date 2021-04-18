@@ -1,6 +1,7 @@
 from app import app
 import urllib.request,json
 from .models import newsources,articles
+
 Sources = newsources.Sources
 Articles = articles.Articles
 
@@ -100,6 +101,8 @@ def process_article_results(article_list):
         urlToImage = article_item.get('urlToImage')
         publishedAt = article_item.get('publishedAt')
         content = article_item.get('content')
+
+
 
         if urlToImage:
             article_object = Articles(id, author, title, description, url, urlToImage, publishedAt, content)
