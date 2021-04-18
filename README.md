@@ -31,27 +31,27 @@ A web application developed using Python's Flask which aggregates news from diff
 * Step 2 : Navigate to  directory:
   * cd News-A.Tickle
 * Step 3 : Open the directory created with your IDE.
-  * If Atom type **`atom .* code .(for Vs Code) or atom .(for Atom)
+  * code .(for Vs Code) or atom .(for Atom)
 
 ### Running the Application
 1. Pre-requisites
-* Ensure to activate virtual environment called virtual,using:
- * source virtual/bin/activate
+   * Ensure to activate virtual environment called virtual,using:
+     * source virtual/bin/activate
 
-* Install flask and pip
-* Install flask_script
+   * Install flask and pip
+   * Install flask_script
 
 2. Run using the executable file ,with command :
-  * ./start.sh
+   * ./start.sh
  3. Open the application on your browser 
 ## Known Bugs
 
 
 ## Technologies Used
 
-- [Python3.6] (https://www.python.org/)
-- [Flask] (http://flask.pocoo.org/)
-- [Heroku] (https://heroku.com)
+- [Python3.6](https://www.python.org/)
+- [Flask](http://flask.pocoo.org/)
+- [Heroku](https://heroku.com)
 - HTML
 - CSS
 - Bootstrap 4.3.1
