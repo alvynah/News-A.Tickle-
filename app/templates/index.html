@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+{% import 'macros.html' as macro%}
 
 <head>
     <meta charset="utf-8"> {% if title %}
@@ -10,7 +11,11 @@
 </head>
 
 <body>
-
+    <!--Categories Section-->
+    <h3>News Sources</h3>
+    <ul>
+        {{macro.displaySourcesList(general)}}
+    </ul>
 </body>
 
 </html>
