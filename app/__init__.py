@@ -14,7 +14,7 @@ def create_app(config_name):
     app.config.from_object(config_options[config_name])
 
     #Initializing Flask Extensions
-    bootsrap.init_app(app)
+    bootstrap.init_app(app)
 
     #Registering the blueprint
     from .main import main as main_blueprint
