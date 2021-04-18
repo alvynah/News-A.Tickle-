@@ -57,3 +57,50 @@ def process_sources_results(sources_list):
 
     return sources_results
 
+
+def get_article(id):
+    get_article_url = base_url.format(id, api_key)
+
+    with urllib.request.urlopen(get_article_url) as url:
+       get_article_data = url.read()
+       get_article_response = json.loads(get_article_data)
+
+       article_results = None
+
+       if get_article_response['articles']:
+           article_results_list = get_article_response['articles']
+           article_results=process_article_results(article_results_list)
+    
+    return article_results
+
+
+def process_article_results(article_list):
+    """
+    Function  that processes the articles result and transform them to a list of Objects
+
+    Args:
+        article_list: A list of dictionaries that contain articles details
+
+    Returns :
+        article_results: A list of source objects
+    """
+
+    article_results = []
+    for article_item in article_list:
+        id = article_item.get('id')
+        author = article_item.get('author')
+        title = article_item.get('title')
+        description = article_item.get('description')
+        url = article_item.get('url')
+        urlToImage = article_item.get('urlToImage')
+        publishedAt = article_item.get('publishedAt')
+        content = article_item.get('content')
+
+        if urlToImage:
+            article_object = Articles(
+                id, author, title, description, url, urlToImage, publishedAt, content)
+            articles_results.append(article_object)
+
+    return article_results
+
+            
