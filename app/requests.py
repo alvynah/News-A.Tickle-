@@ -1,7 +1,9 @@
 from app import app
 import urllib.request,json
-from .models import newsources
+from .models import newsources,articles
 Sources = newsources.Sources
+Articles = articles.Articles
+
 
 
 
@@ -10,6 +12,9 @@ api_key = app.config['NEWS_API_KEY']
 
 #Getting Sources base url
 base_url=app.config["NEWS_API_BASE_URL"]
+
+#Getting Articles base url
+articles_base_url = app.config["ATICKLES_API_BASE_URL"]
 
 def get_newsSources(category):
     '''
@@ -59,7 +64,7 @@ def process_sources_results(sources_list):
 
 
 def get_article(id):
-    get_article_url = base_url.format(id, api_key)
+    get_article_url = articles_base_url.format(id, api_key)
 
     with urllib.request.urlopen(get_article_url) as url:
        get_article_data = url.read()
@@ -97,9 +102,8 @@ def process_article_results(article_list):
         content = article_item.get('content')
 
         if urlToImage:
-            article_object = Articles(
-                id, author, title, description, url, urlToImage, publishedAt, content)
-            articles_results.append(article_object)
+            article_object = Articles(id, author, title, description, url, urlToImage, publishedAt, content)
+            article_results.append(article_object)
 
     return article_results
 

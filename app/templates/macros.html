@@ -1,3 +1,5 @@
 {% macro displaySourcesList(sources_list) %} {% for sources in sources_list %}
-<li>{{ sources.name}}</li>
+<a href="/news.atickle/{{sources.id}}">
+    <li>{{ sources.name}}</li>
+</a>
 {% endfor %} {% endmacro %}

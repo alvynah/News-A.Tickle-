@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from .requests import get_newsSources
+from .requests import get_newsSources,get_article
 
 # Views
 
@@ -14,9 +14,13 @@ def index():
     title="News A.tickle - fun and up-to-date news headlines"
     return render_template('index.html', title=title,general=sources_categories)
 
-@app.route('/news.atickle/<int:id>')
+@app.route('/news.atickle/<id>')
 def newatickles(id):
     '''
     View movie page function that returns the movie details page and its data
     '''
-    return render_template('newsources.html', id=news_id)
+    article_items=get_article(id)
+    print(article_items)
+    title=f'{id}'
+    return render_template('news.atickle.html', title=title, articles=article_items)
+    
