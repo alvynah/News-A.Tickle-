@@ -1,4 +1,5 @@
-# GitHub Search
+# NEWS-A.TICKLE 
+For interesting news from different sources all across the globe.
 ## Author
  [Alvynah Wabwoba](https://github.com/alvynah)
 
