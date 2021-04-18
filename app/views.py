@@ -9,7 +9,8 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    return render_template('index.html')
+    title="News A.tickle - fun and up-to-date news headlines"
+    return render_template('index.html', title=title)
 
 @app.route('/newsources/<int:news_id>')
 def newsources(news_id):
