@@ -96,6 +96,7 @@ def process_article_results(article_list):
     article_results = []
     for article_item in article_list:
         id = article_item.get('id')
+        name=article_item.get('name')
         author = article_item.get('author')
         title = article_item.get('title')
         description = article_item.get('description')
@@ -107,7 +108,7 @@ def process_article_results(article_list):
 
 
         if urlToImage:
-            article_object = Articles(id, author, title, description, url, urlToImage, publishedAt, content)
+            article_object = Articles(id,name, author, title, description, url, urlToImage, publishedAt, content)
             article_results.append(article_object)
 
     return article_results
