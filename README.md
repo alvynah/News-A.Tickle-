@@ -13,7 +13,7 @@ A web application developed using Python's Flask which aggregates news from diff
     ![image](./app/static/images/Screenshot%20Articles.png)
 
 ## Live Link
-[News-A.tickle](http/)
+[News-A.tickle](https://news-atickle.herokuapp.com/)
 
 ## User Story
 
