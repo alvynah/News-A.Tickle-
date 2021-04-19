@@ -3,40 +3,57 @@
 <!-- Styles block -->
 
 {% block styles%} {{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='css/news.atickle.css')}}"> {% endblock %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/news.atickle.css')}}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> {% endblock %}
 
 
 <!-- Content block -->
 {% block content %}
-<div class=newsArticleContents ">
-
+<div class="newsArticleContents">
+    <h1 id=newsTitle> NEWS UPDATES</h1>
+    <h3 id=newsSub>
+        << Highlights>></h3>
+    <hr>
     <!-- Poster background -->
-    {% for article_items in articles %}
-    <div class="row ">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath " style="background: url({{article_items.urlToImage}}) no-repeat center center ">
-        </div>
+    <div class="container allcards">
+        {% for article_items in articles %}
+        <div class="card articles" style="width: 25rem;">
 
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details ">
-            <h3>{{ article_items.title }}</h3>
-            <hr>
-            <p>{{article_items.description}}</p>
-            <hr>
-            <p>{{article_items.content}}</p>
-            <div class="animated fadeInUp details ">
-                {%if article_items.author%}
-                <p class="font-weight-normal ">by {{article_items.author}}</a>.
-                </p>
-                {%endif%} {%if article_items.publishedAt%}
-                <p>Posted on: {{article_items.publishedAt[:10]}}</p>
-                {%endif%}
-
-                <p><a href="{{ article_items.url }} ">Go to full story</a></p>
-
+            <div class="card-header">
+                <div class="card-image">
+                    <img src="{{article_items.urlToImage}}" alt="news update image">
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="card-title">{{ article_items.title }} </p>
+                <div class="card-text">
+                    <hr>
+                    <div class="desc">
+                        <p>{{article_items.description}}</p>
+                    </div>
+                    <hr>
+                    <div class="content">
+                        <p>{{article_items.content}}</p>
+                        <p class="articleLink"><a href="{{ article_items.url }} ">Go to full story --> </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div>
+                    {%if article_items.author%}
+                    <p class="author">{{article_items.author}}
+                    </p>
+                    {%endif%} {%if article_items.publishedAt%}
+                    <p class="date">Posted on: {{article_items.publishedAt[:10]}}</p>
+                    {%endif%}
+                </div>
 
             </div>
         </div>
+        {% endfor%}
+
     </div>
-    {% endfor%}
 
 </div>
 {% endblock %}

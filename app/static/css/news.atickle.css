@@ -6,7 +6,6 @@ body {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
     background-attachment: fixed;
 }
 
@@ -18,4 +17,72 @@ body {
     margin-right: 2%;
     padding-left: 3%;
     color: blanchedalmond;
+}
+
+hr {
+    background-color: whitesmoke;
+    height: 1 px;
+}
+
+#newsTitle {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'display';
+}
+
+#newsSub {
+    font-size: 20px;
+    font-family: 'roboto';
+    text-align: center;
+    font-style: italic;
+    text-shadow: 10px 10px 50px chocolate;
+}
+
+.allcards {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.articles {
+    background-color: blanchedalmond;
+    color: black;
+    margin-bottom: 2%;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: chocolate;
+}
+
+.author {
+    float: left;
+    color: brown;
+}
+
+.date {
+    float: right;
+}
+
+.card hr {
+    height: 1 px;
+}
+
+.articleLink {
+    float: right;
+}
+
+.desc {
+    font-size: 15px;
 }
