@@ -1,5 +1,16 @@
 {% macro displaySourcesList(sources_list) %} {% for sources in sources_list %}
-<a href="/news.atickle/{{sources.id}}">
-    <li>{{ sources.name}}</li>
-</a>
+<div class="container-fluid">
+    <div class="row p-4">
+        <div class="col-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <a href="/news.atickle/{{sources.id}}">
+                        <h4>{{ sources.name }}</h4>
+                    </a>
+                    <p>{{ sources.description | truncate(80) }}</p>
+                </div>
+            </div><br>
+        </div>
+    </div>
+</div>
 {% endfor %} {% endmacro %}
