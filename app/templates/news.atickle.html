@@ -1,29 +1,36 @@
 {% extends 'base.html'%}
+
+<!-- Styles block -->
+
+{% block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/news.atickle.css')}}"> {% endblock %}
+
+
 <!-- Content block -->
 {% block content %}
-<div class="container">
+<div class=newsArticleContents ">
 
     <!-- Poster background -->
     {% for article_items in articles %}
-    <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath" style="background: url({{article_items.urlToImage}}) no-repeat center center">
+    <div class="row ">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 posterPath " style="background: url({{article_items.urlToImage}}) no-repeat center center ">
         </div>
 
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 movie-details ">
             <h3>{{ article_items.title }}</h3>
             <hr>
             <p>{{article_items.description}}</p>
             <hr>
             <p>{{article_items.content}}</p>
-            <div class="animated fadeInUp details">
+            <div class="animated fadeInUp details ">
                 {%if article_items.author%}
-                <p class="font-weight-normal">by {{article_items.author}}</a>.
+                <p class="font-weight-normal ">by {{article_items.author}}</a>.
                 </p>
                 {%endif%} {%if article_items.publishedAt%}
                 <p>Posted on: {{article_items.publishedAt[:10]}}</p>
                 {%endif%}
 
-                <p><a href="{{ article_items.url }}">Go to full story</a></p>
+                <p><a href="{{ article_items.url }} ">Go to full story</a></p>
 
 
             </div>

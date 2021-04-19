@@ -1,0 +1,21 @@
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/newsArticles.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.newsArticleContents {
+    margin-top: 1%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-left: 3%;
+    color: blanchedalmond;
+}
