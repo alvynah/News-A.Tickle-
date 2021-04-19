@@ -1,0 +1,67 @@
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/newsSource.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.titleSec {
+    background-color: antiquewhite;
+}
+
+.titleSources {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'display';
+    color: chocolate;
+}
+
+.titleSubSources {
+    font-size: 20px;
+    font-family: 'roboto';
+    text-align: center;
+    font-style: italic;
+    text-shadow: 10px 10px 50px chocolate;
+}
+
+.sourceDesc {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: 'cursive';
+}
+
+.sourcesCards {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#cardSource {
+    box-shadow: 0 0 30px 0 black;
+    border-radius: 4px;
+    width: 20rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 17px;
+    font-family: 'fantasy';
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    color: chocolate;
+}
+
+.card-body {
+    color: black;
+}
