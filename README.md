@@ -6,9 +6,14 @@ For interesting news from different sources all across the globe.
 ## Description
 A web application developed using Python's Flask which aggregates news from different news sources.It allow a user to select a news source from which they would like to view news articles.The app then allows the user to go to the original news source where need be.
 ## Screenshot
+1. Landing Page(News Sources)
+    ![image](./app/static/images/Screenshot%20Sources.png)
+
+2. News Articles Page
+    ![image](./app/static/images/Screenshot%20Articles.png)
 
 ## Live Link
-
+[News-A.tickle](http/)
 
 ## User Story
 
@@ -45,8 +50,6 @@ A web application developed using Python's Flask which aggregates news from diff
 2. Run using the executable file ,with command :
    * ./start.sh
  3. Open the application on your browser 
-## Known Bugs
-
 
 ## Technologies Used
 
